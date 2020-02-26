@@ -6,8 +6,10 @@ module.exports = {
   root: true,
   // 运行环境
   env: {
-    es6: true,
-    node: true
+    browser: true, // 支持浏览器全局变量
+    es6: true, // 支持es6全局变量
+    node: true, // 支持node环境全局变量
+    jest: true, // 支持jest测试全局变量
   },
   // 使用的扩展库
   extends: [
