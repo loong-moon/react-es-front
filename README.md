@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+这个框架基于 [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 可用脚本
 
-In the project directory, you can run:
+在项目目录中，你可以运行:
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+以开发模式运行项目，<br />在浏览器中可以通过打开 [http://localhost:3000](http://localhost:3000) 查看。
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+编辑时支持热更新，<br />
+还可以在控制台中看到所有lint错误
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+在交互式监视模式下启动测试运行程序。<br />
+有关更多信息请参阅 [running tests](https://facebook.github.io/create-react-app/docs/running-tests) 。
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+在 `build` 文件夹生成生产环境文件。<br />
+在生产模式中正确的生成打包文件，并优化构建以获得最佳性能。
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+生成的文件已经压缩，文件名添加了哈希值。<br />
+运行完成后就可以用于部署了。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+更多相关信息请参考 [deployment](https://facebook.github.io/create-react-app/docs/deployment) 。
 
 ### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**注意: 这是一个单项操作，一旦 `eject`, 就不能撤回了!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+这个操作用于生成本地的webpack配置，不推荐执行，项目中已经使用 `customize-cra` 覆盖webpack配置，请通过该方法配置自定义webpack配置！
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## 项目规范
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+在项目中提交的时候会进行代码检查，如果不符合规范将不能提交:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [代码书写规范](./doc/code-standard.md)
+- [git协作规范](./doc/git-standard.md)
+- [接口规范](./doc/api-standard.md)
