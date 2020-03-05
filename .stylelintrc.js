@@ -13,9 +13,9 @@ module.exports = {
     'stylelint-scss', // 支持scss
   ],
   rules: {
-    "selector-max-id": 0, // id选择器嵌套层数
-    // "function-url-quotes": "double", // url为双引号
+    "selector-max-id": 0, // id选择器最多嵌套层数
     // "max-empty-lines": 3, // 最多空行
+    // "function-url-quotes": "double", // url为双引号
     // "string-quotes": "double", // 字符串引号为双引号
   }
 }
