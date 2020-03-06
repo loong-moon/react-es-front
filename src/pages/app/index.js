@@ -1,9 +1,15 @@
 import React from 'react'
 import logo from './assets/logo.svg'
-import './assets/index.css'
+import { login } from '@/api/user'
+import './assets/index.scss'
 
 
 function App () {
+  login().then(res => {
+    console.log(res, 'resaaaaaaaaaaaaaaaaa')
+  }).catch(error => {
+    console.log(error.message, 'erroraaaaaaaaaaaaaaaaaaaaa')
+  })
   return (
     <div className="App">
       <header className="App-header">
