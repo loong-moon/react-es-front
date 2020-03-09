@@ -37,7 +37,7 @@ module.exports = {
   rules: {
     "eol-last": 0, // 关闭文件末尾强制换行
     "no-multiple-empty-lines": [1, {"max": 3}], // 空行最多不能超过3行
-    "indent": [1, 2],
+    "indent": [1, 2], // 缩进2个空格
     "import/first": 1, // import必须在文件顶端
     "spaced-comment": 1, // 注释符号后必须有空格
     "no-trailing-spaces": 0, // 关闭尾随空白限制
@@ -52,5 +52,6 @@ module.exports = {
         "exports": "only-multiline",
         "functions": "never"
     }],
+    // "react/prop-types": 0, // 关闭参数类型验证
   }
 }
