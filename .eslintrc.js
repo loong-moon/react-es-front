@@ -14,13 +14,15 @@ module.exports = {
   // 使用的扩展库
   extends: [
     'plugin:react/recommended',
-    'standard'
+    'standard',
   ],
   // 配置全局变量，值为 false 表示这个全局变量不允许被重新赋值
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
+  // 指定eslint解析器
+  parser: "babel-eslint",
   // 解析器配置
   parserOptions: {
     // 使用的额外的语言特性
@@ -52,6 +54,7 @@ module.exports = {
         "exports": "only-multiline",
         "functions": "never"
     }],
+    "jsx-a11y/anchor-is-valid": 0, // 关闭a标签href验证
     // "react/prop-types": 0, // 关闭参数类型验证
   }
 }

@@ -8,6 +8,26 @@ axios.defaults.timeout = 10000
 axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
 axios.defaults.baseURL = '/api'
 
+const CancelSourceMap = new Map()
+// 全局请求拦截器
+axios.interceptors.request.use(config => {
+  // 发起请求时，取消掉当前正在进行的相同请求
+  const source = axios.CancelToken.source()
+  config.cancelToken = source.token
+  
+  if (CancelSourceMap.has(config.url)) {
+    CancelSourceMap.get(config.url).cancel('取消重复请求')
+    CancelSourceMap.set(config.url, source)
+  } else {
+    CancelSourceMap.set(config.url, source)
+  }
+
+  return config
+}, error => {
+  return Promise.reject(error)
+})
+
+
 // 全局响应拦截器
 axios.interceptors.response.use(
   function (res) {
