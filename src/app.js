@@ -5,7 +5,7 @@ import {
 import { ViewRoute } from '@/components'
 import routes from '@/routes'
 
-import './assets/index.scss'
+import './assets/sass/app.scss'
 
 
 function App () {
