@@ -1,29 +1,73 @@
-body {
-  position: relative;
-  display: block;
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/****
+ * 公共css，可用于任何项目
+****/
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover { color: $primary; }
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+input:focus,
+textarea:focus,
+button,
+select {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
+
+/* 布局 */
+.clearfix { @include clearfix; }
+.fl { float: left; }
+.fr { float: right; }
+.center { @extend %center; }
+.ovh { overflow: hidden; }
+.hide { display: none; }
+.show { display: block; }
+.cover { @extend %cover; }
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.clamp { @include clamp; }
+.mc { margin: 0 auto; }
+.tac { text-align: center; }
+.tal { text-align: left; }
+.tar { text-align: right; }
+
+/* 宽度 */
+.w100 { width: 100%; }
+
+/* 边距 */
+.m5 { margin: 5px; }
+.m10 { margin: 10px; }
+.m20 { margin: 20px; }
+.ml5 { margin-left: 5px; }
+.ml10 { margin-left: 10px; }
+.ml20 { margin-left: 20px; }
+.mr5 { margin-right: 5px; }
+.mr10 { margin-right: 10px; }
+.mr20 { margin-right: 20px; }
+.mt5 { margin-top: 5px; }
+.mt10 { margin-top: 10px; }
+.mt20 { margin-top: 20px; }
+.mt30 { margin-top: 30px; }
+.mb5 { margin-bottom: 5px; }
+.mb10 { margin-bottom: 10px; }
+.mb20 { margin-bottom: 20px; }
+.mb30 { margin-bottom: 30px; }
+
+/* 字体 */
+h1, h2, h3 { font-weight: 400; }
+h4, h5, h6 { font-weight: 700; }
+.ft18 { font-size: 18px; }
+.ft16 { font-size: 16px; }
+.ft14 { font-size: 14px; }
+.ft12 { font-size: 12px; }
+.text-green { color: $green; }
+.text-orange { color: $orange; }
+.text-red { color: $red; }
+.text-sub { color: $subColor; }
+.text-disabled { color: $disabled; }

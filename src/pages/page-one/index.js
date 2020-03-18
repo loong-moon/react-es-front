@@ -4,7 +4,7 @@ import './assets/index.scss'
 
 function App () {
   return (
-    <div className="page-one">
+    <div className="page-one text-red">
       页面1
     </div>
   )
