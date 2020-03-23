@@ -15,6 +15,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'standard',
+    'react-app',
   ],
   // 配置全局变量，值为 false 表示这个全局变量不允许被重新赋值
   globals: {
@@ -34,8 +35,15 @@ module.exports = {
   },
   // 第三方插件
   plugins: [
-    'react'
+    'react', // react语法检查
+    'react-hooks', // hooks语法检查
   ],
+  // 共享设置
+  settings: {
+    react: {
+      version: 'detect' // 自动检测当前安装的react版本
+    }
+  },
   rules: {
     'eol-last': 0, // 关闭文件末尾强制换行
     'no-multiple-empty-lines': [1, {'max': 3}], // 空行最多不能超过3行
@@ -55,6 +63,7 @@ module.exports = {
         'functions': 'never'
     }],
     'jsx-a11y/anchor-is-valid': 0, // 关闭a标签href验证
+    'operator-linebreak': [1, 'after'], // 语句太长时，运算符放在行位
     // 'react/prop-types': 0, // 关闭参数类型验证
   }
 }

@@ -2,6 +2,16 @@
  * 公共css，可用于任何项目
 ****/
 
+// "Hiragino Sans GB", "PingFangSC-Light"都是苹果字体
+body {
+  min-height: 100vh;
+  font-family: "Hiragino Sans GB", "PingFangSC-Light", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 14px;
+  // line-height: 1.4286;
+  color: $content;
+  -webkit-overflow-scrolling: touch; //控制在移动设备上是否使用回弹效果
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -71,3 +81,8 @@ h4, h5, h6 { font-weight: 700; }
 .text-red { color: $red; }
 .text-sub { color: $subColor; }
 .text-disabled { color: $disabled; }
+
+/* 滚动条 */
+.scollbar {
+  @extend %scrollbar;
+}

@@ -1,7 +1,8 @@
 const { 
   addWebpackAlias,
   override,
-  adjustStyleLoaders
+  adjustStyleLoaders,
+  useEslintRc,
 } = require('customize-cra')
 const path = require('path')
 
@@ -22,5 +23,8 @@ module.exports = override(
         }
       })
     }
-  })
+  }),
+
+  // 应用自定义的eslint
+  useEslintRc('.eslintrc.js')
 )
