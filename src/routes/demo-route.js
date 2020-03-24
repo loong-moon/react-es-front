@@ -1,10 +1,11 @@
 /****
  * demo模块的route配置
 ****/
-
-import Home from '@/pages/home'
-import Login from '@/pages/login'
+import { lazy } from 'react'
 import homeRoutes from './main'
+
+const Login = lazy(() => import(/* webpackChunkName: "demo" */ '@/pages/login'))
+const Home = lazy(() => import(/* webpackChunkName: "demo" */ '@/pages/home'))
 
 const routes = [
   {

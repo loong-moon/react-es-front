@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import {
   BrowserRouter as Router,
 } from 'react-router-dom'
@@ -11,7 +11,9 @@ import './assets/sass/app.scss'
 function App () {
   return (
     <Router>
-      <ViewRoute routes={routes}></ViewRoute>
+      <Suspense fallback={null}>
+        <ViewRoute routes={routes}></ViewRoute>
+      </Suspense>
     </Router>
   )
 }

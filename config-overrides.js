@@ -26,5 +26,6 @@ module.exports = override(
   }),
 
   // 应用自定义的eslint
+  // eslint-disable-next-line
   useEslintRc('.eslintrc.js')
 )
