@@ -1,4 +1,4 @@
-这个框架基于 [Create React App](https://github.com/facebook/create-react-app).
+react + react-router + redux + axios + antd + sass + eslint + stylelint + koa + mockjs + http-proxy-middleware + react-app-rewired
 
 ## 可用脚本
 
