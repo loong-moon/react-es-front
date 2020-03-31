@@ -23,9 +23,9 @@ module.exports = function () {
         
     // 处理options请求
     if (ctx.method === 'OPTIONS') {
-      ctx.status = 200
+      ctx.status = 200 // 直接返回
     } else {
-      await next()
+      await next() // 继续执行后面的处理
     }
         
     // console.log(ctx.header, ctx.url, ctx.status, 'ssss')

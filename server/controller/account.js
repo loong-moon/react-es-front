@@ -3,12 +3,21 @@
  */
 
 const account = require('../mock-data/account')
+// const axios = require('axios')
 
 module.exports = {
 
   // 登录路由控制器
-  login (ctx) {
+  async login (ctx) {
     ctx.body = account.loginMockData
+    // const res = await axios({
+    //   url: '/user',
+    //   method: 'post',
+    //   proxy: {
+    //     host: '127.0.0.1',
+    //     port: 9000,
+    //   },
+    // })
     // ctx.throw(400, 'name required', { user: 'user' })
     console.log(ctx.url, ctx.status, '/login')
   },
