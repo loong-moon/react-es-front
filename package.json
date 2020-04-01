@@ -10,7 +10,7 @@
     "lint": "eslint --ext .js --ext .jsx src",
     "lint-fix": "eslint --fix --ext .js --fix --ext .jsx src",
     "lintstyle": "stylelint src/**/*.scss src/**/*.css",
-    "mock-dev": "nodemon --harmony ./server/app.js",
+    "mock": "nodemon --harmony ./server/app.js",
     "static": "nodemon --harmony ./server/static.js"
   },
   "dependencies": {

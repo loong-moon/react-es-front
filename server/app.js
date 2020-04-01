@@ -1,3 +1,7 @@
+/****
+ * 服务启动文件，请求由路由处理
+****/
+
 const Koa = require('koa')
 
 const app = new Koa()
