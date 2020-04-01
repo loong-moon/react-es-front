@@ -21,7 +21,7 @@ module.exports = function (config) {
       const res = createProxyMiddleware(options)(ctx.req, ctx.res, next) // ctx.req, ctx.res 为原始的node对象
       return res // 返回一个promise对象
     } else {
-      await next() // 如果不匹配就继续后续处理
+      next() // 如果不匹配就继续后续处理
     }
     
   }

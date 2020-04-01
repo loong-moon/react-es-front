@@ -6,6 +6,11 @@ const Koa = require('koa')
 
 const app = new Koa()
 
+// 配置端口
+const local = require('./conf/local')
+const host = local.ipv4.address
+const port = local.port
+
 // // 跨域处理，当前端请求使用反向代理时不需要
 // const corsHandle = require('./middleware/cors-handle')
 // app.use(corsHandle())
@@ -18,5 +23,5 @@ app.use(bodyParser())
 const router = require('./router/index')
 app.use(router.routes()).use(router.allowedMethods())
 
-app.listen(3100)
-console.log('mock-server: http://localhost:3100')
+app.listen(port)
+console.log(`mock-server:\nhttp://localhost:${port}\nhttp://${host}:${port}`)

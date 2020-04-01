@@ -11,7 +11,7 @@
     "lint-fix": "eslint --fix --ext .js --fix --ext .jsx src",
     "lintstyle": "stylelint src/**/*.scss src/**/*.css",
     "mock": "nodemon --harmony ./server/app.js",
-    "static": "nodemon --harmony ./server/static.js"
+    "static": "node ./server/static.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
