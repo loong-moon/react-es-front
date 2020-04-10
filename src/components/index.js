@@ -3,7 +3,9 @@
 ****/
 
 import ViewRoute from './view-route'
+import NumberRoll from './number-roll'
 
 export {
   ViewRoute,
+  NumberRoll
 }
