@@ -1,5 +1,5 @@
-/****
- * 导出所有公共自定义hooks
-****/
+import usePushPage from './use-push-page'
 
-export default {}
+export {
+  usePushPage
+}

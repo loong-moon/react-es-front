@@ -64,6 +64,7 @@ module.exports = {
     }],
     'jsx-a11y/anchor-is-valid': 0, // 关闭a标签href验证
     'operator-linebreak': [1, 'after'], // 语句太长时，运算符放在行位
+    'react/display-name': 0, // 关闭组件名检查
     // 'react/prop-types': 0, // 关闭参数类型验证
   }
 }

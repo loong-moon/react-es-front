@@ -20,6 +20,9 @@ module.exports = {
     'at-rule-no-unknown': null, // 屏蔽原生未知规则检查
     'scss/at-rule-no-unknown': true, // 使用scss插件中未知规则检查
     'declaration-block-trailing-semicolon': null, // 代码块中最后一项声明的分号限制，在jsx语法style属性中和eslint冲突
+    'no-descending-specificity': null, // 优先级更高的允许写在前面
+    'font-family-no-missing-generic-family-keyword': null, // 允许font-family缺少泛型系列
+    'value-keyword-case': null, // 会改变js中style属性的值，因此关闭
     // "function-url-quotes": "double", // url为双引号
     // "string-quotes": "double", // 字符串引号为双引号
   }
