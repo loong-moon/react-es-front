@@ -1,6 +1,81 @@
 /****
- * 工具类函数出口
+ * 描述:公共函数出口
+ * 创建者:李克振
+ * 日期:2021/02/22
 ****/
+
+/**
+ * 添加cookie
+ * @param {string} name<必须>  // cookie名
+ * @param {string} value<必须>  // cookie值
+ * @param {number} expiresHours<必须>  // 过期时间
+ **/
+export const addCookie = (name, value, expiresHours) => {
+  let cookieString = name + '=' + escape(value) + '; path=/'
+  // 判断是否设置过期时间
+  if (expiresHours > 0) {
+    const date = new Date()
+    date.setTime(date.getTime() + expiresHours * 3600 * 1000)
+    cookieString = cookieString + '; expires=' + date.toUTCString()
+  }
+  document.cookie = cookieString
+}
+
+/**
+ * 获取cookie
+ * @param {string} name<必须>  // cookie名
+ **/
+export const getCookie = name => {
+  const strCookie = document.cookie
+  const arrCookie = strCookie.split(';')
+  for (let i = 0; i < arrCookie.length; i++) {
+    const arr = arrCookie[i].split('=')
+    if (arr[0] === name) return unescape(arr[1])
+  }
+  return ''
+}
+
+/**
+ * 删除cookie
+ * @param {string} name<必须>  // cookie名
+ **/
+export const deleteCookie = name => {
+  const date = new Date()
+  date.setTime(date.getTime() - 10000)
+  document.cookie = name + '=; path=/; expires=' + date.toUTCString()
+}
+
+/**
+ * 事件绑定方法
+ * @param {object} element<必须>  // dom对象
+ * @param {string} type<必须>  // 事件类型
+ * @param {function} handler<必须>  // 触发事件后的回调函数
+ **/
+export const bindEvent = (element, type, func) => {
+  if (element.addEventListener) {
+    element.addEventListener(type, func, false)
+  } else if (element.attachEvent) {
+    element.attachEvent('on' + type, func)
+  } else {
+    element['on' + type] = func
+  }
+}
+
+/**
+ * 移除事件绑定
+ * @param {object} element<必须>  // dom对象
+ * @param {string} type<必须>  // 事件类型
+ * @param {function} handler<必须>  // 触发事件后的回调函数
+ **/
+export const removeEvent = (element, type, handler) => {
+  if (element.removeEventListener) {
+    element.removeEventListener(type, handler, false)
+  } else if (element.detachEvent) {
+    element.detachEvent('on' + type, handler)
+  } else {
+    element['on' + type] = null
+  }
+}
 
 /**
  * 深拷贝
@@ -11,52 +86,13 @@ export const deepCopy = (obj) => {
   if (typeof obj !== 'object' || obj === null) return obj
   const clone = Array.isArray(obj) ? [] : {}
   for (const i in obj) {
-    if (typeof obj[i] === 'object') {
-      deepCopy(obj[i])
+    if (typeof obj[i] === 'object' || obj[i] !== null) {
+      clone[i] = deepCopy(obj[i])
     } else {
       clone[i] = obj[i]
     }
   }
   return clone
-}
-
-/**
- * 格式化日期
- * @param {object} date<必须>  // 日期，可以是各种有效的日期，包括字符串、日期对象、时间戳
- * @param {string} fmt<可选>  // 需要的格式
- * @returns {string} fmt // 返回格式化后的日期
- **/
-export const formatDate = (date, fmt) => {
-  if (!date) {
-    return date
-  } else {
-
-    if (!fmt) {
-      fmt = 'YYYY-MM-DD hh:mm:ss'
-    }
-
-    const isString = typeof date === 'string'
-    const isFloatNUmber = /^[0-9]+.?[0-9]*/.test(date)
-    const isHasSeparator = /[-:/]/.test(date)
-    const time = isString && isFloatNUmber && !isHasSeparator ? new Date(parseFloat(date)) : new Date(date)
-
-    const o = {
-      'M+': time.getMonth() + 1, // 月份
-      'D+': time.getDate(), // 日
-      'h+': time.getHours(), // 小时
-      'm+': time.getMinutes(), // 分
-      's+': time.getSeconds(), // 秒
-      'q+': Math.floor((time.getMonth() + 3) / 3), // 季度
-      S: time.getMilliseconds() // 毫秒
-    }
-    if (/(Y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (time.getFullYear() + '').substr(4 - RegExp.$1.length))
-    for (const k in o) {
-      if (new RegExp('(' + k + ')').test(fmt)) {
-        fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length))
-      }
-    }
-    return fmt
-  }
 }
 
 /**
@@ -90,14 +126,14 @@ export const guid = () => {
  * @param {string} url<可选>  // 获取参数名的URL
  * @returns {string} val // 返回获取的参数值
  **/
-export const GetQuery = (name, url) => {
+export const getQuery = (name, url) => {
   const reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
   const searchStr = url || window.location.search
   const r = searchStr.substr(1).match(reg) // 获取url中"?"符后的字符串并正则匹配
 
   let val = null
   if (r !== null) {
-    val = encodeURIComponent(r[2])
+    val = decodeURIComponent(r[2])
   }
   
   return val

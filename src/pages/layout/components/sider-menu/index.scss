@@ -1,0 +1,154 @@
+// 菜单收起时样式
+.ant-menu-submenu-popup {
+  background: $navBg !important;
+  .ant-menu-sub {
+    color: rgba(#fff, 0.8);
+    background: $navBg !important;
+
+    .ant-menu-item {
+      margin: 0;
+      &:hover {
+        background-color: rgba(#000, 0.2);
+      }
+    }
+    .ant-menu-item-selected, .ant-menu-item-selected:hover {
+      background-color: $theme;
+    }
+  }
+}
+
+.sider-menu-wrapper {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+  background-color: $navBg;
+
+  // 滚动样式
+  @extend %scrollbar;
+  &::-webkit-scrollbar-thumb {
+    background: rgba(#fff, 0.25);
+  }
+
+  .sider-menu, .sider-menu .ant-menu-sub {
+    background-color: $navBg;
+  }
+
+  .ant-menu-inline-collapsed {
+    width: 64px;
+    & > .ant-menu-item, & > .ant-menu-submenu > .ant-menu-submenu-title {
+      padding: 0 24px;
+    }
+  }
+
+  // 菜单样式重置
+  .sider-menu {
+    & > .ant-menu-item, & > .ant-menu-submenu > .ant-menu-submenu-title {
+      height: 54px;
+      margin: 0;
+      line-height: 54px;
+    }
+
+    & > .ant-menu-item-selected, & > .ant-menu-submenu-selected > .ant-menu-submenu-title {
+      &::before {
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 4px;
+        height: 100%;
+        content: "";
+        background-color: $theme;
+      }
+    }
+
+    .ant-menu-item, .ant-menu-submenu-title {
+      .ya-icon {
+        min-width: 18px;
+        margin-right: 10px;
+        font-size: 18px;
+        transform: translateY(1px);
+      }
+    }
+
+    .ant-menu-sub, .ant-menu-submenu-open {
+      color: rgba(#fff, 0.8);
+
+      & > .ant-menu-item {
+        margin: 0;
+      }
+    }
+
+    .ant-menu-item:hover,
+    .ant-menu-submenu-title:hover {
+      color: rgba(#fff, 0.8);
+      background-color: rgba(#000, 0.2);
+    }
+
+    .ant-menu-item-active,
+    .ant-menu-submenu-active,
+    .ant-menu-submenu-selected {
+      color: $theme;
+      background-color: rgba(#000, 0.2);
+    }
+
+    .ant-menu-item-selected {
+      .anticon, .anticon + span {
+        color: $theme;
+      }
+    }
+
+    &.ant-menu-dark:not(.ant-menu-horizontal) {
+      .ant-menu-item-selected {
+        background-color: rgba(#000, 0.2);
+      }
+      .ant-menu-sub .ant-menu-item-selected {
+        background-color: $theme;
+        .anticon, .anticon + span {
+          color: #fff;
+        }
+      }
+    }
+
+    .ant-menu-submenu-selected {
+      .ant-menu-submenu-title:hover {
+        color: $theme;
+      }
+    }
+  }
+
+
+  // 菜单展开指向图标
+  .ant-menu-submenu-inline {
+    & > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+      transform: translateY(2px);
+      &::before, &::after {
+        width: 8px;
+        height: 1px;
+      }
+      &::before {
+        transform: rotate(-45deg) translateX(4px)
+      }
+      &::after {
+        transform: rotate(45deg) translateX(-4px)
+      }
+    }
+
+    &.ant-menu-submenu-open > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+      transform: translateY(-3px);
+      &::before {
+        transform: rotate(45deg) translateX(4px)
+      }
+      &::after {
+        transform: rotate(-45deg) translateX(-4px)
+      }
+    }
+
+    &.ant-menu-submenu-selected {
+      & > .ant-menu-submenu-title .ant-menu-submenu-arrow,
+      .ant-menu-submenu-title:hover .ant-menu-submenu-arrow {
+        &::before, &::after {
+          background-color: $theme;
+        }
+      }
+    }
+  }
+}

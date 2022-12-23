@@ -1,0 +1,54 @@
+.ya-view-card-wrap {
+  position: relative;
+  min-height: 100px;
+  overflow: hidden;
+  color: #fff;
+  background: $theme;
+  border-radius: 8px;
+
+  .ya-view-card-con {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  .ya-view-card-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .ya-view-card-count {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .background-img {
+    width: 100%;
+  }
+
+  .icon-box {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    background-color: rgba(#fff, 0.15);
+    border-radius: 8px;
+    transform: translateY(-50%);
+  }
+
+  .box-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110px;
+    height: 40px;
+    background: url("./imgs/box-bg.png") no-repeat;
+  }
+}
+

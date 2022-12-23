@@ -1,0 +1,14 @@
+.page-loading {
+  @extend %cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(#000, 0.7);
+
+  .ant-spin-dot {
+    font-size: 24px;
+  }
+}
+

@@ -1,0 +1,20 @@
+.ya-text {
+  color: $textBtn;
+  cursor: pointer;
+
+  &.text-link {
+    &:hover {
+      color: $theme;
+    }
+  }
+
+  &.text-btn {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+

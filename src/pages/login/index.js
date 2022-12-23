@@ -1,22 +1,21 @@
-import React from 'react'
-import { login } from '@/api/user'
-import './assets/index.scss'
+/****
+ * 描述:页面-登录页面出口
+ * 创建者:李克振
+ * 日期:2021/04/30
+****/
+// import React from 'react'
+import View from './index.comp'
+import { connect } from 'react-redux'
+import actionCreator from '@/store/user-info/action-creator'
 
-const loginReq = () => {
-  login().then(res => {
-    console.log(res, 'resaaaaaaaaaaaaaaaaa')
-  }).catch(error => {
-    console.log(error.message, 'erroraaaaaaaaaaaaaaaaaaaaa')
-  })
+
+// 将store中属性注入到组件
+const mapStateToProps = (state, ownProps) => {
+  return {
+    userInfo: state.userInfo
+  }
 }
 
-function App () {
-  return (
-    <div className="login">
-      <div className="title">登录页</div>
-      <div><a onClick={loginReq}>登录</a></div>
-    </div>
-  )
-}
+const Comp = connect(mapStateToProps, actionCreator)(View)
 
-export default App
+export default Comp

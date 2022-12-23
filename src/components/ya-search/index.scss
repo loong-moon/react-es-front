@@ -1,0 +1,36 @@
+.ya-search-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .search-input {
+    width: 300px;
+  }
+
+  &.ya-search-multi {
+    margin-bottom: 0;
+  }
+
+  .search-form-item {
+    flex-basis: 25%;
+    margin-right: 0;
+    margin-bottom: 15px;
+
+    &.range-picker {
+      flex-basis: 50%;
+
+      .ant-picker-range {
+        width: 100%;
+      }
+    }
+
+    .ant-form-item-label {
+      width: 80px;
+      padding-left: 10px;
+    }
+  }
+
+  .search-form-btn {
+    margin-left: 20px;
+  }
+}

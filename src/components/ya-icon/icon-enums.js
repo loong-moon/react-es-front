@@ -1,0 +1,58 @@
+/****
+ * 描述: 配置-icon
+ * 创建者:李克振
+ * 日期:2021/05/10
+****/
+import {
+  BarChartOutlined,
+  BarsOutlined,
+  CalendarOutlined,
+  ContainerOutlined,
+  CloudServerOutlined,
+  CoffeeOutlined,
+  DatabaseOutlined,
+  ExperimentOutlined,
+  HomeOutlined,
+  InboxOutlined,
+  LaptopOutlined,
+  LineChartOutlined,
+  LockOutlined,
+  LogoutOutlined,
+  MehOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  PieChartOutlined,
+  RiseOutlined,
+  SearchOutlined,
+  SettingOutlined,
+  SwapOutlined,
+  SolutionOutlined,
+  UserOutlined,
+} from '@ant-design/icons'
+
+export default {
+  BarChartOutlined,
+  BarsOutlined,
+  CalendarOutlined,
+  ContainerOutlined,
+  CloudServerOutlined,
+  CoffeeOutlined,
+  DatabaseOutlined,
+  ExperimentOutlined,
+  HomeOutlined,
+  InboxOutlined,
+  LaptopOutlined,
+  LineChartOutlined,
+  LockOutlined,
+  LogoutOutlined,
+  MehOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  PieChartOutlined,
+  RiseOutlined,
+  SearchOutlined,
+  SettingOutlined,
+  SwapOutlined,
+  SolutionOutlined,
+  UserOutlined,
+}

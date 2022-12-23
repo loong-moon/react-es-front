@@ -1,0 +1,106 @@
+.ya-panel-wrap {
+  padding: 12px 16px 16px;
+  background-color: #fff;
+  border: 1px solid #e3e5eb;
+  border-radius: 8px;
+
+  .ya-panel-header {
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+    margin-bottom: 16px;
+    line-height: 32px;
+  }
+
+  .header-title {
+    font-size: 16px;
+    color: #1c1c1c;
+  }
+
+  &.flex, &.flex-row {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .ya-panel-body {
+      display: flex;
+      flex: 1;
+    }
+  }
+
+  &.flex {
+    .ya-panel-body {
+      flex-direction: column;
+      overflow-y: auto;
+    }
+  }
+
+  &.full {
+    min-height: 100%;
+  }
+
+  .ya-panel-side, .ya-panel-section {
+    padding: 10px;
+    background-color: $panelBg;
+    border-radius: 4px;
+  }
+
+  // 面板侧边栏
+  .ya-panel-side {
+    width: 220px;
+    margin-right: 16px;
+    overflow-y: auto;
+
+    // 侧边树样式
+    .ant-tree {
+      color: $tableText;
+      background-color: transparent;
+
+      .ant-tree-treenode {
+        align-items: center;
+        padding: 0;
+        line-height: 30px;
+      }
+
+      .ant-tree-switcher-icon {
+        font-size: 12px;
+        color: #a3abb7;
+        transform: translateY(2px);
+      }
+
+      .ant-tree-node-selected {
+        color: $theme;
+        background-color: transparent;
+      }
+    }
+
+    .ant-tree-treenode-selected {
+      width: 100%;
+      background-color: rgba($theme, 0.04);
+    }
+  }
+
+  // 面板内容区域
+  .ya-panel-section-title {
+    margin-bottom: 10px;
+    line-height: 32px;
+    color: $title;
+  }
+
+  .ant-descriptions-bordered {
+    .ant-descriptions-item-label {
+      color: $title;
+    }
+
+    .ant-descriptions-item-content {
+      color: $tableText;
+      background-color: #fff;
+    }
+  }
+
+  .ya-panel-con {
+    flex: 1;
+    overflow-y: auto;
+  }
+}
+

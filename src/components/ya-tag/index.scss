@@ -1,0 +1,27 @@
+.ya-tag {
+  &.ant-tag-success {
+    color: $green;
+    background: lighten($green, 40%);
+    border-color: $green;
+  }
+  &.ant-tag-processing {
+    color: $theme;
+    background: lighten($theme, 38%);
+    border-color: $theme;
+  }
+  &.ant-tag-error {
+    color: $red;
+    background: lighten($red, 36%);
+    border-color: $red;
+  }
+  &.ant-tag-warning {
+    color: $orange;
+    background: lighten($orange, 38%);
+    border-color: $orange;
+  }
+  &.ant-tag-default {
+    color: $gray;
+    border-color: $gray;
+  }
+}
+

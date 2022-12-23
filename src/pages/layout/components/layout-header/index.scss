@@ -1,0 +1,45 @@
+// 菜单收起时样式
+.layout-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: #fff;
+  background-color: $navBg;
+
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    .divide {
+      width: 1px;
+      height: 34px;
+      margin: 0 30px;
+      background-color: rgba(#fff, 0.3);
+    }
+  }
+
+  .user-popover-link {
+    &:hover {
+      color: $theme;
+      cursor: pointer;
+    }
+  }
+}
+
+.layout-header-popper-list {
+  min-width: 120px;
+  li {
+    height: 40px;
+    line-height: 40px;
+    color: $content;
+
+    .iconfont {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      color: $theme;
+      cursor: pointer;
+    }
+  }
+}

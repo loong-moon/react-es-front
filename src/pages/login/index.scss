@@ -1,0 +1,42 @@
+.login-page {
+  height: 100vh;
+  color: #fff;
+  // background: url("./assets/login.jpg") no-repeat;
+  // background-size: cover;
+  background-color: $navBg;
+
+  .logo {
+    width: 180px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  // 登录框
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    padding: 20px;
+    background-color: rgba(#000, 0.4);
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+  }
+  // .login-logo {
+  //   float: left;
+  //   height: 40px;
+  // }
+  .login-title {
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  // 登录表单
+  .login-form {
+    margin-top: 30px;
+  }
+  .ant-checkbox-wrapper {
+    color: #fff;
+  }
+}

@@ -1,0 +1,52 @@
+.ya-editable-table-wrap {
+  .ya-editable-table-head {
+    color: $title;
+    background-color: #f3f5f8;
+  }
+
+  .ya-editable-table-row {
+    display: flex;
+    border-bottom: 1px solid $border;
+  }
+
+  .ya-editable-table-col {
+    padding: 10px 5px;
+    overflow: hidden; // 构造BFC，使flex元素不被子元素撑开
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ya-editable-table-body {
+    .ya-editable-table-col {
+      line-height: 32px;
+
+      .ant-input-number {
+        width: 100%;
+      }
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  // 表格操作列样式
+  .handle-col {
+    .table-action {
+      height: auto;
+      padding: 0;
+      color: $textBtn;
+
+      &:hover {
+        color: $theme;
+      }
+    }
+    .upload-btn {
+      margin: 0 16px;
+    }
+    .anticon {
+      font-size: 16px;
+    }
+  }
+}
+

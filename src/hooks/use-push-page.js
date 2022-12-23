@@ -1,15 +1,17 @@
 /****
- * 跳转页面hooks
+ * 描述: hooks-push跳转页面
+ * 创建者:李克振
+ * 日期:2021/05/10
 ****/
 import { useCallback } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function usePushPage () {
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const pushPage = useCallback((path) => {
-    history.push(path)
-  }, [history])
+    navigate(path)
+  }, [navigate])
 
   return pushPage
 }

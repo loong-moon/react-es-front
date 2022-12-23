@@ -5,13 +5,21 @@ module.exports = {
   // 使用的扩展库
   extends: [
     'stylelint-config-standard', // 标准的规则配置
-    'stylelint-config-recess-order', //
+    'stylelint-config-recess-order', // css属性书写顺序规则
   ],
+
   // 第三方插件
   plugins: [
-    // 'stylelint-order', // 书写顺序
     'stylelint-scss', // 支持scss
   ],
+
+  overrides: [
+    {
+      files: ["src/**/*.scss"],
+      customSyntax: "postcss-scss"
+    }
+  ],
+
   rules: {
     'selector-max-id': 0, // id选择器最多嵌套层数
     'max-empty-lines': 3, // 最多空行
@@ -23,7 +31,12 @@ module.exports = {
     'no-descending-specificity': null, // 优先级更高的允许写在前面
     'font-family-no-missing-generic-family-keyword': null, // 允许font-family缺少泛型系列
     'value-keyword-case': null, // 会改变js中style属性的值，因此关闭
-    // "function-url-quotes": "double", // url为双引号
-    // "string-quotes": "double", // 字符串引号为双引号
+    'color-function-notation': null, // 关闭颜色函数检查
+    'selector-class-pattern': null, // 关闭指定类名格式
+    'font-family-name-quotes': null, // 关闭指定字体名引号规则
+    'alpha-value-notation': null, // 关闭透明度值格式指定
+    'value-no-vendor-prefix': null, // 关闭没有供应商前缀限制
+    'import-notation': null, // 关闭导入格式检查
+    'function-no-unknown': null, // 关闭css方法检查
   }
 }

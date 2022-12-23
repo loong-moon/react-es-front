@@ -1,0 +1,67 @@
+.ya-table-wrap {
+  .ant-table {
+    color: $tableText;
+  }
+
+  // 表格头部样式
+  .ant-table-thead > tr > th {
+    color: $title;
+    background-color: #f3f5f8;
+  }
+
+  // 表格内容样式
+  .ant-table-tbody {
+    overflow-y: auto;
+
+    & > tr > td {
+      border-bottom: 1px solid $divider;
+    }
+  }
+
+  // 表格操作列样式
+  .handle-col {
+    .table-action {
+      height: auto;
+      padding: 0;
+      color: $textBtn;
+
+      &:hover {
+        color: $theme;
+      }
+    }
+    .upload-btn {
+      margin: 0 16px;
+    }
+    .anticon {
+      font-size: 16px;
+    }
+  }
+
+  // 表格分页样式
+  .ant-pagination-item-active {
+    background-color: $theme;
+    border-color: $theme;
+
+    &:hover {
+      background-color: lighten($theme, 5%);
+      border-color: $theme;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+  .ant-pagination-total-text {
+    margin-right: 16px;
+    color: rgba($tableText, 0.4);
+
+    span {
+      margin: 0 5px;
+      color: $tableText;
+    }
+  }
+  .ant-table-pagination {
+    margin-bottom: 0;
+  }
+}
+

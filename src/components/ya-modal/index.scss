@@ -1,0 +1,28 @@
+.ya-modal-wrap {
+  padding-bottom: 0;
+
+  .ant-modal-header {
+    height: 50px;
+    padding: 0 16px;
+  }
+
+  .ant-modal-close-x {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .ant-modal-title {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 50px;
+    color: $title;
+  }
+
+  .ant-modal-body {
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+  }
+}
+

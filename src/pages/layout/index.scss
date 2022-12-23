@@ -1,0 +1,45 @@
+.page-layout {
+  height: 100vh;
+  background-color: $background;
+
+  .ant-layout-header {
+    height: 66px;
+  }
+
+  // 侧边样式
+  .layout-sider-wrap {
+    background-color: $navBg;
+
+    .ant-layout-sider-children {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-collapse {
+      width: 36px;
+      padding: 5px 8px;
+      margin: 0 14px 15px auto;
+      font-size: 18px;
+      color: #fff;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(#000, 0.2);
+      }
+    }
+  }
+  .sider-header {
+    padding: 0 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: $theme;
+
+    .logo {
+      height: 34px;
+    }
+  }
+
+  .layout-body {
+    flex: 1;
+    overflow: hidden;
+  }
+}

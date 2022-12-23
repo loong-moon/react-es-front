@@ -2,7 +2,76 @@
  * 本项目中的公共样式
 ****/
 
-/* 重置外部引用样式 */
+@import "../iconfont/iconfont.css";
+@import "./common.scss";
+
+/**
+重置外部引用样式
+**/
+.app {
+
+  // 重置输入框样式
+  .ant-input {
+    border-color: $border;
+
+    &:hover, &:focus {
+      border-color: $theme;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  // 重置按钮样式
+  .ant-btn-primary, .ant-btn-primary:focus {
+    background-color: $theme;
+    border-color: $theme;
+    box-shadow: none;
+  }
+  .ant-btn-primary:hover {
+    background-color: lighten($theme, 5%);
+    border-color: lighten($theme, 5%);
+  }
+  .ant-btn-background-ghost.ant-btn-primary {
+    color: $theme;
+    border-color: $theme;
+
+    &:hover {
+      color: lighten($theme, 5%);
+      border-color: lighten($theme, 5%);
+    }
+  }
+  .ant-btn + .ant-btn {
+    margin-left: 16px;
+  }
+
+  // 重置开关样式
+  .ant-switch {
+    background-color: $gray;
+  }
+  .ant-switch-checked {
+    background-color: $theme;
+  }
+  .ant-switch-small {
+    .ant-switch-handle {
+      top: 1px;
+      left: 1px;
+      width: 14px;
+      height: 14px;
+    }
+
+    &.ant-switch-checked .ant-switch-handle {
+      left: calc(100% - 14px - 1px);
+    }
+  }
+}
 
 
-/* 应用级样式 */
+/**
+ * 应用级样式
+**/
+
+* {
+  @extend %scrollbar;
+}

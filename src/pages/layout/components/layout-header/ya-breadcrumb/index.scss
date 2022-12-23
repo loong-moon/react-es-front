@@ -1,0 +1,29 @@
+.ya-breadcrumb {
+  display: flex;
+  align-items: center;
+
+  .icon-dingwei {
+    margin-right: 10px;
+    color: #fff;
+  }
+
+  .ant-breadcrumb {
+    flex: 1;
+    color: rgba(#fff, 0.8);
+    & > span:last-child {
+      color: #fff;
+    }
+  }
+
+  .ant-breadcrumb-separator {
+    color: rgba(#fff, 0.8);
+  }
+
+  a.ant-breadcrumb-link {
+    color: rgba(#fff, 0.8);
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
